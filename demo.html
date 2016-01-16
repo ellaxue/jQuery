@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#hide").click(function(){
+        $("#flip").hide();
+    });
+    $("#show").click(function(){
+        $("#flip").show();
+    });
+    $("#slideup").click(function(){
+        $("#slidepanel").slideUp("slow");
+    });
+    $("#slidedown").click(function(){
+        $("#slidepanel").slideDown("slow");
+    });
+    $("#fadein").click(function(){
+        $("#fadepanel").fadeIn("slow");
+    });
+    $("#fadeout").click(function(){
+        $("#fadepanel").fadeOut("slow");
+    });
+    $("#animateright").click(function(){
+        $("#animatepanel").animate({left: '700px'}, "slow");
+    });
+    $("#animateleft").click(function(){
+        $("#animatepanel").animate({left: '50px'}, "slow");
+    });
+    $("#stop").hover(function(){
+        $("#animatepanel").stop();
+    });
+});
+</script>
+<style>
+#slidepanel, #flip {
+    padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+}
+
+#slidepanel {
+    padding: 50px;
+    display: none;
+}
+#fadepanel {
+    padding: 50px;
+    display: none;
+}
+#animatepanel {
+    padding: 50px;
+}
+</style>
+</head>
+<body>
+
+<p1>This is paragraph p1</p1><br><br>
+
+<button id="hide">Hide</button>
+<button id="show">Show</button>
+<button id="slidedown">Slide Down</button>
+<button id="slideup">Slide Up</button>
+<button id="fadein">Fade In</button>
+<button id="fadeout">Fade Out</button>
+<button id="animateright">Animate Right</button>
+<button id="stop">Stop</button><br>
+<button id="animateleft">Animate Left</button>
+
+<div id="flip"> Show! </div><br>
+<div id="slidepanel">More Show!</div>
+<div id="fadepanel">And even more Show!</div>
+<div id="animatepanel" style="background:#98bf21;height:100px;width:100px;position:absolute;">Animated Show!</div>
+</body>
+</html>
+
+
+
